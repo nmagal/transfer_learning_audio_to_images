@@ -12,3 +12,14 @@ Therefore, it does not seem like there is an useful knowledge retained from the 
 Results are shown in the image above. The number in front of each run indicates how much of the training data of the target dataset that the model was trained on
 For example, pretrained_.07 indicates the pretrained model's performance using 70% of the Caltech256 dataset.
 
+## File Structure
+* `data:` This directory contains files relating to the MagnaTagATune Dataset.
+  * `annotations_final.csv:` File containing labels and paths for MagnaTagATune Dataset.
+  * `annotations_final_proces.csv:` Preprocessed file containg labels and paths for MagnaTagATune after dropping corrupted data entries and including only Top 50 tags.
+  * `top50_tags.txt:` File containing Top 50 tags of the MagnaTagATune dataset
+* `scripts`
+  * `caltech_evaluation.ipynb:` File for evaluating pretrained models vs random initialization of model on the Caltech256 dataset.
+  * `mel_extractor.py:` File for extracting mel spectrograms from mp3 files.
+  * `preprocess_annotations.py:` File for preprocessing dataset to drop corrupted data entries and include only Top 50 Tags.
+  * `pretraining.ipynb:` File for pretraining model on the MagnaTagATune dataset.
+
