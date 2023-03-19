@@ -6,8 +6,9 @@ The intuition of this is that the low level features that the model learns from 
 Given this, I experiment with pretraining a resnet18 model on the MagnaTagATune Dataset and measure its performance during training on the target dataset of the Caltech256 dataset.
 
 ## Results
-Results do not show too much difference from pretraining and random initializing a model.
+![Performance](https://github.com/nmagal/transfer_learning_audio_to_images/blob/main/images/eval.png)
+Results do not show too much difference from pretraining and random initialization of a model, and in some cases the pretrained model actually performs worse than the randomly initialized model.
 Therefore, it does not seem like there is an useful knowledge retained from the model by pretraining on the MagnaTagATune Dataset.
 Results are shown in the image above. The number in front of each run indicates how much of the training data of the target dataset that the model was trained on
-For example, pretrained_.07 indicates the pretrained models performance using 70% of the Caltech256 dataset.
+For example, pretrained_.07 indicates the pretrained model's performance using 70% of the Caltech256 dataset.
 
